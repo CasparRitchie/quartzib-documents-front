@@ -11,7 +11,7 @@ const Productions = () => {
     const fetchProductions = async () => {
       try {
         const token = await getAccessTokenSilently();
-        const response = await axios.get('http://localhost:5000/productions', {
+        const response = await axios.get('https://quartzib-documents-back-962e7b20e999.herokuapp.com/productions', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProductions(response.data);
