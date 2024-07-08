@@ -10,6 +10,7 @@ const Tables = () => {
     const fetchTables = async () => {
       try {
         const token = await getAccessTokenSilently();
+        console.log('Token:', token);  // Log the token
         const response = await axios.get('https://quartzib-documents-back-962e7b20e999.herokuapp.com/tables', {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -34,4 +35,4 @@ const Tables = () => {
   );
 };
 
-export default Tables;
+export default Tables;  
